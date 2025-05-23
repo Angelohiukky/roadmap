@@ -1,0 +1,129 @@
+:root {
+        /* Tema claro (padrão) */
+        --primary-color: #2c6aa1;
+        --secondary-color: #4a90e2;
+        --accent-color: #f39c12;
+        --light-color: #f5f7fa;
+        --dark-color: #2c3e50;
+        --success-color: #27ae60;
+        --danger-color: #e74c3c;
+        --warning-color: #f1c40f;
+        --info-color: #3498db;
+        --text-color: #333333;
+        --background-color: #ffffff;
+        --card-background: #ffffff;
+        --border-color: #e0e0e0;
+
+        /* Cores para classificação de risco */
+        --red-color: #e74c3c;
+        --orange-color: #e67e22;
+        --yellow-color: #f1c40f;
+        --green-color: #27ae60;
+        --blue-color: #3498db;
+
+        /* Cores para categorias */
+        --reception-color: #8e44ad;
+        --triage-color: #f39c12;
+        --medical-color: #2980b9;
+        --exam-color: #16a085;
+        --discharge-color: #27ae60;
+      }
+
+      /* Tema escuro */
+      [data-theme="dark"] {
+        --primary-color: #02085a;
+        --secondary-color: #28025a ;
+        --accent-color: #f7ab24;
+        --light-color: #2c3e50;
+        --dark-color: #f5f7fa;
+        --text-color: #f0f0f0;
+        --background-color: #1a1a2e;
+        --card-background: #2a2a42;
+        --border-color: #444466;
+
+        /* Cores para classificação de risco (mais brilhantes no modo escuro) */
+        --red-color: #ff5e52;
+        --orange-color: #ff9234;
+        --yellow-color: #ffce38;
+        --green-color: #42d680;
+        --blue-color: #4aafff;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: var(--text-color);
+        background-color: var(--background-color);
+        overflow-x: hidden;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      header {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 1rem 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+
+      nav ul {
+        display: flex;
+        list-style: none;
+      }
+
+      nav ul li {
+        margin-left: 1.5rem;
+      }
+
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+
+      nav ul li a:hover {
+        color: var(--accent-color);
+      }
+
+      .noturno {
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        font-size: 0.9rem;
+        margin-left: 1.5rem;
+      }
+
+      .noturno svg {
+        margin-right: 5px;
+        width: 16px;
+        height: 16px;
+      }
