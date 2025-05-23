@@ -56,7 +56,7 @@ Este projeto visa criar um sistema web onde usuários podem acessar como **Pacie
 
 #### Paciente:
 
-- Login/Cadastro
+- Login/Cadastro (Nome e telefone para feedback)
 - Visualização de dados pessoais
 - Histórico de atendimentos
 
