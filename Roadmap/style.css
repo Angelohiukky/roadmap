@@ -64,6 +64,13 @@ body {
   overflow-x: hidden;
 }
 
+h1 {
+  font-size: 2rem;
+  padding-top: 2rem;
+  padding-left: 2rem;
+  margin-bottom: 2rem;
+  color: var(--red-color);
+}
 .container {
   width: 100%;
   max-width: 1400px;
@@ -266,11 +273,11 @@ body {
     font-size: 1.2rem;
     flex: none;
   }
-  
+
   .logo-imagem {
     height: 30px;
   }
-  
+
   .logo-texto {
     font-size: 0.9rem;
     position: static;
@@ -284,7 +291,7 @@ body {
   .logo-texto {
     display: none;
   }
-  
+
   .logo-imagem {
     height: 35px;
   }
@@ -308,15 +315,22 @@ main {
   margin: 0;
 }
 
-.menu-opcao a, .paciente, .profissional {
+.menu-opcao a,
+.paciente,
+.profissional {
   text-decoration: none;
   padding: 10px 20px;
   background-color: #007bff;
   color: white;
-  border-radius: 5px;
+  border-color: #007bff;
+  border-radius: 15px;
   font-size: 16px;
 }
 
-.menu-opcao li:hover, .paciente:hover , .profissional:hover {
+.menu-opcao li:hover,
+.paciente:hover,
+.profissional:hover {
   background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  border-radius: 15px;
 }
