@@ -240,7 +240,7 @@ h1 {
 .rodape {
   background-color: var(--primary-color);
   color: white;
-  padding: 1rem 0;
+  padding: 1px 0;
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -261,7 +261,7 @@ h1 {
 }
 
 .rodape-lista li {
-  margin-left: 1.5rem;
+  margin-left: 1rem;
 }
 
 .rodape-lista li a {
