@@ -120,6 +120,55 @@ h1 {
   align-items: center;
 }
 
+.menu-opcao {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  padding: 0;
+}
+
+.menu-opcao li {
+  flex: 1 1 200px;
+  max-width: 300px;
+}
+
+.menu-opcao a {
+  display: block;
+  width: 100%;
+  padding: 12px 20px;
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: background-color 0.3s ease;
+}
+.menu-opcao a:hover {
+  background-color: var(--accent-color);
+}
+
+.voltar {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+  text-align: center;
+  text-color: var(--light-color);
+}
+.voltar:hover {
+  background-color: var(--accent-color);
+}
 .menu-lista {
   display: flex;
   list-style: none;
@@ -303,34 +352,14 @@ main {
   margin-bottom: 60px;
 }
 
-.menu-opcao {
-  list-style: none;
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  padding: 0;
-}
+@media (max-width: 480px) {
+  .menu-opcao li {
+    flex: 1 1 100%;
+    max-width: none;
+  }
 
-.menu-opcao li {
-  margin: 0;
-}
-
-.menu-opcao a,
-.paciente,
-.profissional {
-  text-decoration: none;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  border-color: #007bff;
-  border-radius: 15px;
-  font-size: 16px;
-}
-
-.menu-opcao li:hover,
-.paciente:hover,
-.profissional:hover {
-  background-color: var(--accent-color);
-  border-color: var(--accent-color);
-  border-radius: 15px;
+  .menu-opcao a {
+    font-size: 0.95rem;
+    padding: 10px 16px;
+  }
 }
