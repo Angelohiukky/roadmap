@@ -1,53 +1,23 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Início</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RoadMap</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-      <div class="topo">
-        <div class="logo"><img src="data:image/png;base64,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" alt="logo-rs"
-            style="width:100px;height:70px;">
-
-        <nav>
-          <ul>
-            <li><a href="#sobre">Sobre</a></li>
-            <li>
-                <button class="noturno" id="modo-noturno">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="moon-icon"
-                >
-                  <path
-                    d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"
-                  ></path>
-                </svg>
-                <span>Modo Noturno</span>
-              </button>    
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-    <div class="container">
-        <h1>Diga se você é...</h1>
-        <form>
-            <div class="input-group">Paciente | Acompanhante</label>
-                <input type="checkbox" id="Paciente ou Acompanhante" name="paciente">
-            </div>
-            <div class="input-group">Profissional de Saúde</label>
-                <input type="checkbox" id="Profissional" name="profissional">
-            </div>
-            <button type="submit">Entrar</button>
-        </form>
-    </div>
-    </body>
+  <main>
+    <section>
+      <h1>Diga se você é...</h1>
+      <nav>
+        <ul class="menu-opcao">
+          <li><button class="paciente" href="./paciente.html">Paciente | Acompanhante</button></li>
+          <li><button class="profissional" href="./profissional.html">Profissional de Saúde</button></li>
+        </ul>
+      </nav>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
