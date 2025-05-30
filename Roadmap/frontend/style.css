@@ -93,10 +93,8 @@ h1 {
   padding-left: 2rem;
   color: var(--red-color);
  }
-  .container-politica {
-  display: flex
-  
-}
+
+ 
 .container-politica h2, p {
   font-size: 1.2rem;
   line-height: 1.6;
@@ -137,7 +135,8 @@ h1 {
 }
 
 .logo-texto {
-  white-space: nowrap;
+  display: inline-block;
+  text-align: center;
 }
 
 .menu {
