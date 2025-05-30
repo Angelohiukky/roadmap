@@ -1,0 +1,451 @@
+:root {
+  /* Tema claro (padrão) */
+  --primary-color: #2c6aa1;
+  --secondary-color: #4a90e2;
+  --accent-color: #f39c12;
+  --light-color: #f5f7fa;
+  --dark-color: #2c3e50;
+  --success-color: #27ae60;
+  --danger-color: #e74c3c;
+  --warning-color: #f1c40f;
+  --info-color: #3498db;
+  --text-color: #333333;
+  --background-color: #ffffff;
+  --card-background: #ffffff;
+  --border-color: #e0e0e0;
+
+  /* Cores para classificação de risco */
+  --red-color: #e74c3c;
+  --orange-color: #e67e22;
+  --yellow-color: #f1c40f;
+  --green-color: #27ae60;
+  --blue-color: #3498db;
+
+  /* Cores para categorias */
+  --reception-color: #8e44ad;
+  --triage-color: #f39c12;
+  --medical-color: #2980b9;
+  --exam-color: #16a085;
+  --discharge-color: #27ae60;
+}
+
+/* Tema escuro */
+[data-theme="dark"] {
+  --primary-color: #02085a;
+  --secondary-color: #28025a;
+  --accent-color: #f7ab24;
+  --light-color: #2c3e50;
+  --dark-color: #f5f7fa;
+  --text-color: #f0f0f0;
+  --background-color: #1a1a2e;
+  --card-background: #2a2a42;
+  --border-color: #444466;
+
+  /* Cores para classificação de risco (mais brilhantes no modo escuro) */
+  --red-color: #ff5e52;
+  --orange-color: #ff9234;
+  --yellow-color: #ffce38;
+  --green-color: #42d680;
+  --blue-color: #4aafff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 2rem;
+  padding-top: 2rem;
+  padding-left: 2rem;
+  margin-bottom: 2rem;
+  color: var(--red-color);
+}
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.container-politica {
+  width: 100%;
+  max-width: 1400px;
+  margin: 5 auto;
+  padding: 20px;
+  margin-bottom: 5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.container-politica h1 {
+  font-size: 2rem;
+  padding-top: 5rem;
+  padding-left: 2rem;
+  color: var(--red-color);
+}
+
+.container-politica h2 {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  margin-left: 2rem;
+}
+
+/* Cabeçalho fixo */
+.cabecalho {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.cabecalho .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.logo-imagem {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(0) invert(1); /* Torna a imagem branca */
+}
+
+.logo-texto {
+  display: inline-block;
+  text-align: center;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu-opcao {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  padding: 0.5rem;
+}
+
+.menu-opcao li {
+  flex: 1 1 200px;
+  max-width: 300px;
+}
+
+.menu-opcao a {
+  display: block;
+  width: 100%;
+  padding: 12px 20px;
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: background-color 0.3s ease;
+}
+
+.menu-opcao a:hover {
+  background-color: var(--accent-color);
+}
+
+.voltar {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+  text-align: center;
+  position: fixed;
+  bottom: 35px;
+  right: 20px;
+}
+
+.voltar:hover {
+  background-color: var(--accent-color);
+}
+
+.menu-lista {
+  display: flex;
+  list-style: none;
+}
+
+.menu-lista li {
+  margin-left: 1.5rem;
+}
+
+.menu-lista li a {
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.menu-lista li a:hover {
+  color: var(--accent-color);
+}
+
+.noturno {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  margin-left: 1.5rem;
+}
+
+.noturno svg {
+  margin-right: 5px;
+  width: 16px;
+  height: 16px;
+  fill: white;
+}
+
+.menu-hamburguer {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.menu-hamburguer span {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  transition: all 0.3s;
+}
+
+.menu-ativo .menu-lista {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background-color: var(--primary-color);
+  padding: 1rem;
+  text-align: center;
+}
+
+.menu-ativo .noturno {
+  margin: 1rem auto;
+}
+
+/* Rodapé fixo */
+.rodape {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.rodape-conteudo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.rodape-lista {
+  display: flex;
+  list-style: none;
+}
+
+.rodape-lista li {
+  margin-left: 1rem;
+}
+
+.rodape-lista li a {
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.rodape-lista li a:hover {
+  color: var(--accent-color);
+}
+
+/* Estilos para o formulário de login */
+.login-form {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--card-background);
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  font-size: 1rem;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 5px rgba(44, 106, 161, 0.3);
+}
+
+.btn-login {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-login:hover {
+  background-color: var(--accent-color);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .menu-lista,
+  .noturno {
+    display: none;
+  }
+
+  .menu-hamburguer {
+    display: flex;
+  }
+
+  .menu-ativo .menu-lista,
+  .menu-ativo .noturno {
+    display: flex;
+  }
+
+  .menu-ativo .menu-hamburguer span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .menu-ativo .menu-hamburguer span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-ativo .menu-hamburguer span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+  }
+
+  .rodape-conteudo {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .rodape-lista {
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .rodape-lista li {
+    margin: 0.5rem 0;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+    flex: none;
+  }
+
+  .logo-imagem {
+    height: 30px;
+  }
+
+  .logo-texto {
+    font-size: 0.9rem;
+    position: static;
+    transform: none;
+    margin-left: 10px;
+  }
+
+  .login-form {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+}
+
+/* Para telas muito pequenas, ocultar o texto e mostrar apenas a logo */
+@media (max-width: 480px) {
+  .logo-texto {
+    display: none;
+  }
+
+  .logo-imagem {
+    height: 35px;
+  }
+
+  .menu-opcao li {
+    flex: 1 1 100%;
+    max-width: none;
+  }
+
+  .menu-opcao a {
+    font-size: 0.95rem;
+    padding: 10px 16px;
+  }
+}
+
+/* Ajuste para o conteúdo principal não ser coberto */
+main {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
